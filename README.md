@@ -8,6 +8,8 @@
 ✨ Автоматическое определение типа карты: При вводе номера кредитной карты система автоматически определяет ее тип (Visa, Mastercard, или UnionPay).
 
 
+
+
 The "Payment Information" project is a web application designed to provide secure and convenient handling of credit card information.
 It combines three key functions:
 
