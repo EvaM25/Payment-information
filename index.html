@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">
+            Payment information
+        </h2>
+        <div class=" card card-container">
+          <div class="card__front">
+            <div class="card__brand">
+                <h2 class="card__brand-name">Unity Bank</h2>
+                <img data-logo class="card__brang-logo" src="img/visa.png" alt="logo">
+            </div>
+              <img class="card__front-img" src="img/chip.png" alt="chip"> 
+              <div class="card__front-numbers">
+                <div class="card__number">
+                    ####
+                </div>
+                <div class="card__number">
+                    ####
+                </div>
+                <div class="card__number">
+                    ####
+                </div>
+                <div class="card__number">
+                    ####
+                </div>
+              </div>
+            <div class="card__infobox">
+              <div class="card__box">
+                <span class="card__span">
+                    card holder
+                </span>
+                <div class="card__name-input">
+                    name
+                </div> 
+                </div>
+                <div class="card__box">
+                    <span class="card__span">
+                        expires
+                    </span>
+                    <div class="card__expiration">
+                        <span class="card__exp-month">mm</span>
+                        <span class="card__exp-year">yy</span>
+                    </div>
+              </div>
+            </div>
+            <div class="card__back">
+                <div class="card__stripe"></div>
+                 <div class="card__back-box">
+                    <span>cvv</span>
+                    <div class="card__box-cvv"></div>
+                 </div>   
+            </div>
+          </div>
+              <form class="form card__form" action="">
+                  <div class="card__input-box">
+                      <span>card holder</span>
+                      <input class="card__input card__input-name" type="text" aria-label="card holder's name" required>
+                  </div>
+                  <div class="card__input-box">
+                    <span>card number</span>
+                    <div data-connected-inputs class="card__inputs">
+                        <input class="card__input card__input-number" type="tel" maxlength="4" aria-label="Credit-card first 4 digits" required pattern="[0-9]{4}">
+                        <input class="card__input card__input-number" type="tel" maxlength="4" aria-label="Credit-card second 4 digits" required pattern="[0-9]{4}">
+                        <input class="card__input card__input-number" type="tel" maxlength="4" aria-label="Credit-card third 4 digits" required pattern="[0-9]{4}">
+                        <input class="card__input card__input-number" type="tel" maxlength="4" aria-label="Credit-card last 4 digits" required pattern="[0-9]{4}">
+                    </div>
+                </div>
+                <div class="form__box">
+                    <div class="card__input-box">
+                        <span>expiration mm</span>
+                         <select id="expiration-month" class="card__input card__input-month" aria-label="Expiration month" required>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="card__input-box">
+                        <span>expiration yy</span>
+                         <select id="expiration-year" class="card__input card__input-year" aria-label="Expiration year" required data-expiration-year>
+                        </select>
+                    </div>
+                    <div class="card__input-box">
+                        <span>cvv</span>
+                        <input type="tel" maxlength="3" class="card__input card__input-cvv" id="cvc" aria-label="cvc" required>
+                    </div>
+                </div>
+                <button class="btn-reset card__btn" type="submit">submit</button>
+              </form>
+        </div>
+
+    </div>
+</body>
+</html>
